@@ -26,3 +26,28 @@ const items=[
     {name: weed, image: weed.jpg}
 ]
 
+let seconds = 0, minutes =0;
+let moveCount = 0, winCount = 0;
+
+const timeGenerator = () => {
+    seconds +=1;
+
+    if(seconds>=60){
+        minutes +=1;
+        seconds =0;
+    }
+
+    let secondsValue = seconds < 10 ? '0${seconds}': seconds;
+    let minutesValue = minutes < 10 ? '0${minutes}': minutes;
+
+    timeValue.innerHTML = '<span>TIme:</span> ${minutesValue}:{secondsValue}';
+    
+};
+
+const movesCounter =() => {
+    movesCount +=1;
+    moves.innerHTML = '<span> Moves: </span> ${movesCount}';
+
+};
+
+//https://youtu.be/dqqxkrKhfS4?list=PLNCevxogE3fgy0pAzVccadWKaQp9iHspz&t=993
