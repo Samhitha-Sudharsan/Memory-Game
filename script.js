@@ -26,7 +26,7 @@ const items=[
     {name: weed, image: weed.jpg}
 ]
 
-<<<<<<< HEAD
+
 let seconds = 0, minutes =0;
 let moveCount = 0, winCount = 0;
 
@@ -51,6 +51,8 @@ const movesCounter =() => {
 
 };
 
+
+
+
+
 //https://youtu.be/dqqxkrKhfS4?list=PLNCevxogE3fgy0pAzVccadWKaQp9iHspz&t=993
-=======
->>>>>>> 02c5d88f4e05e78c85a7b24aaf99bf0998a940a1
