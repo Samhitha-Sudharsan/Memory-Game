@@ -24,3 +24,17 @@ body{
 
 
 }
+
+.game-container{
+    position : relative;
+    display:grid;
+    width: 100%;
+    gap: 0.6em;
+}
+
+.card-container{
+    position: relative;
+    width:6.25 em;
+    height: 6.25em;
+    cursor:pointer;
+}

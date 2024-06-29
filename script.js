@@ -51,8 +51,46 @@ const movesCounter =() => {
 
 };
 
+const generateRandom = (size = 4) =>{
+    let tempArray = [...items];
+    let cardValues = [];
+    size = (size * size)/2;
+    for (let i =0; i<size ;i++){
+        let randomIndex = Math.floor(Math.random() * tempArray.length);
+        cardValues.push = (tempArray[randomIndex]);
+        tempArray.splice(randomIndex,1);
+    }
+    return cardValues;
 
+};
 
+const matrixGenerator=(cardValues, size = 4)=>{
+    gameContainer.innerHTML = "";
+    cardValues = [...cardVelues, ...cardValues];
+    cardValues.sort(()=>Math.random()-0,5);
+    for (let i =0; i<size*size;i++){
+        gameContainer.innerHTML += `
+            <div class = "card-container" data-card-values = "${cardValues[i].name}">
+                <div class ="card-front">? </div>
+                <div class ="card-back">
+                    <img src = "${cardValues[i].image}" class = "image"/>
+                </div>
+            </div>
+
+        `
+    }
+    gameContainer.style.gridTemplateColumns = `
+        repeat(${size},auto)
+    `
+};
+
+const initialiser = ()=>{
+    results.innerText="";
+    winCount=0;
+    let cardValues = generateRandom();
+    matrixGenerator(cardValues);
+    
+};
 
 
 //https://youtu.be/dqqxkrKhfS4?list=PLNCevxogE3fgy0pAzVccadWKaQp9iHspz&t=993
